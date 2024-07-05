@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  5 15:09:34 2024
+# Make data base, printed on Fri Jul  5 17:00:21 2024
 
 # Variables
 
@@ -15,13 +15,9 @@ GDK_BACKEND = x11
 # environment
 LC_ALL = C
 # environment
-NO_AT_BRIDGE = 1
-# environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
-# environment
-GJS_DEBUG_OUTPUT = stderr
 # environment
 LC_NAME = uz_UZ.UTF-8
 # environment
@@ -36,8 +32,6 @@ LC_ADDRESS = uz_UZ.UTF-8
 MAKE_COMMAND := make
 # environment
 QT_ACCESSIBILITY = 1
-# environment
-GOPATH = /home/abbos/go
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -73,7 +67,7 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=5b58f61993283b63c923667
 # makefile
 CURDIR := /home/abbos/go/src/github.com/Projects/SustainabilityService
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # automatic
@@ -99,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # environment
 PT8HOME = /opt/pt
 # environment
-VSCODE_PID = 46441
+VSCODE_PID = 146140
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -127,11 +121,9 @@ MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
 # environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ca02b02a_35cb_4d97_abd2_1ca5f2a98a8c
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b6fcfa0b_dc76_4a62_b0cb_7fcbc854a266
 # environment
 MAKELEVEL := 0
 # default
@@ -141,15 +133,13 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # default
 MAKEFILES := 
 # makefile (from 'Makefile', line 2)
-DB_URL = postgres://postgres:pass@localhost:5432/greenthumb?sslmode=disable
+DB_URL = postgres://postgres:pass@localhost:5432/sustainability?sslmode=disable
 # environment
 LC_MONETARY = uz_UZ.UTF-8
 # automatic
 ^F = $(notdir $^)
 # environment
 LC_TIME = uz_UZ.UTF-8
-# environment
-INVOCATION_ID = 94aa82dabf124218b6d1a720af202e97
 # environment
 USERNAME = abbos
 # environment
@@ -176,10 +166,6 @@ GNUMAKEFLAGS :=
 LOGNAME = abbos
 # makefile (from 'Makefile', line 1)
 CURRENT_DIR = $(shell pwd)
-# environment
-GOTELEMETRY_GOPLS_CLIENT_TOKEN = 370
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := proto-gen
 # environment
@@ -193,13 +179,9 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1449
-# environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
 LC_MEASUREMENT = uz_UZ.UTF-8
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 46441
 # environment
 _ = /usr/bin/code
 # environment
@@ -208,10 +190,6 @@ LC_PAPER = uz_UZ.UTF-8
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 COLORTERM = truecolor
-# environment
-JOURNAL_STREAM = 8:32043
-# environment
-GOMODCACHE = /home/abbos/go/pkg/mod
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -228,8 +206,6 @@ VSCODE_IPC_HOOK = /run/user/1000/vscode-a7434a92-1.89-main.sock
 TERM = xterm-256color
 # environment
 IM_CONFIG_PHASE = 1
-# environment
-GOPROXY = https://proxy.golang.org,direct
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -251,7 +227,7 @@ GDMSESSION = ubuntu
 # environment
 LC_IDENTIFICATION = uz_UZ.UTF-8
 # variable set hash-table stats:
-# Load=120/1024=12%, Rehash=0, Collisions=12/150=8%
+# Load=108/1024=11%, Rehash=0, Collisions=11/138=8%
 
 # Pattern-specific Variable Values
 
@@ -259,9 +235,9 @@ LC_IDENTIFICATION = uz_UZ.UTF-8
 
 # Directories
 
-# . (device 66309, inode 4501767): 16 files, no impossibilities.
+# . (device 66309, inode 4501767): 17 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -280,16 +256,13 @@ migrate_force:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  recipe to execute (from 'Makefile', line 17):
 	migrate -path migrations -database ${DB_URL}  -verbose force 1
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-07-05 14:37:27.296639896
+#  Last modified 2024-07-05 16:53:29.744855085
 #  File has been updated.
 #  Successfully updated.
 
@@ -317,6 +290,9 @@ run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 #  recipe to execute (from 'Makefile', line 8):
 	go run cmd/main.go
 
@@ -342,12 +318,12 @@ migrate_down:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 27 / storage = 234 B / avg = 8 B
-# current buf: size = 8162 B / used = 234 B / count = 27 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 241 B / avg = 8 B
+# current buf: size = 8162 B / used = 241 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 37 / hit rate = 27%
+# strcache performance: lookups = 38 / hit rate = 26%
 # hash-table stats:
-# Load=27/8192=0%, Rehash=0, Collisions=0/37=0%
-# Finished Make data base on Fri Jul  5 15:09:34 2024
+# Load=28/8192=0%, Rehash=0, Collisions=0/38=0%
+# Finished Make data base on Fri Jul  5 17:00:21 2024
 
  
