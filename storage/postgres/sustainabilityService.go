@@ -2,6 +2,7 @@ package postgres
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	pb "sustainabilityService/genproto/SustainabilityService"
@@ -317,6 +318,7 @@ func (s *SustainabilityRepo) GetUserLeaderboard(ctx context.Context, in *pb.GetU
 		LIMIT 10;
 	`
 
+	fmt.Println()
 	rows, err := s.db.QueryxContext(ctx, query)
 	if err != nil {
 		return nil, err
